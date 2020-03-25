@@ -1,0 +1,87 @@
+-When making a website, you may have to collaborate with others.
+Git is a tool to that will help you to do team development smoothly.
+
+-Git is operated from the terminal
+
+-To start of, type 
+	$git init //init = initialize
+
+-These are the 3 steps to team development.
+	1. Make changes to a file
+	2. Prepare to share the changes
+	3. Share the changes
+
+- Assume u have some file you want to share say index.html
+
+- Before sharing it we have to make sure that we add that file, which is done by
+	$git add file_name
+
+- Once added, we will save the selected files with a message. Then we're ready to share them.
+
+-o record a selected file, run the command 
+	$git commit -m "message"
+PS:- Message can be anything but its better if it descibes the content of the commit.
+	this message is called as commit message
+
+- We call this kind of saving a commit.
+
+- Now the preparation is done
+
+-But, now how can we actually share the files?
+Ans: Git uses something called a Remote to store shared files. Developers share files by uploading to and downloading from remotes
+
+-When you add a remote, a name is required. Usually, developers use the name origin.
+
+-More specifically, to register a remote, type 
+	$git remote add remote_name URL
+
+-once done we will upload a file to the remote, 
+	$git push origin master
+
+- What happen till this was you have uploaded that file to my repository using push now i will download it on my computer by running 
+	$git pull origin master
+downloading this file or such file is called PULL
+
+
+
+POINTS TO BE NOTED
+
+1. In team development, it is important to clearly recognize the changes you have made and select which changes should be shared with your partners. 
+2. What kind of files :
+	First, it is important to recognize the changes you have made. Using $git status, you can display a list of modified files.
+	$git status
+3. Now if you want to know what changes are there , then
+	$git diff
+4. If u accept the changes then just type
+	$git add
+
+NOTE:- changes made will appear in green and old one in red
+
+5. if you want to know which file you added use
+	$git status
+
+6. Modified code will be displayed, as shown on the right, with the code after in green and the code before in red.
+
+
+-Final step once done type git commit -m "Message"
+ message should be what changes you made and then again, type
+	$git push origin master
+
+
+-Question
+You should write commit messages that can be easily understood by others, but how can they even be seen!?
+Answer Using command 
+	$git log
+anyone can view the commits
+
+-if you want to see both the commit messages and the changes that were made, type
+	$git log -p
+	Q to quit
+
+
+
+
+
+
+If you want to download some repository then type,
+	$git clone
